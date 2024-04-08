@@ -15,21 +15,27 @@
           </div>
           <div class="col">
            <div><img src="./imgs/livro.png" alt=""></div>
-            <form>
+            <form class="user" action="insert_user.php" method="post">
                 <div class="mb-3">
                   <label for="informeM" class="informeM">CADASTRO</label>
-                  <input type="email" class="form-control" placeholder="Insira seu nome" id="informeM " aria-describedby="emailHelp">
+                  <input type="name" class="form-control" placeholder="Insira seu nome" id="nome" name="nome">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="email"></label>
+                  <input type="email" class="form-control" placeholder="Insira seu email" id="email" name="email">
                 </div>
                 <div class="mb-3">
                     <label for="senha" class="senha"></label>
-                    <input type="senha" class="form-control" placeholder="Insira sua senha" id="senha" aria-describedby="emailHelp">
+                    <input type="password" class="form-control" placeholder="Insira sua senha" id="senha" name="senha">
                   </div>
                 <div class="mb-3">
-                  <label for="Csenha" class="Csenha"></label>
-                  <input type="senha" class="form-control" placeholder="Confirme sua senha" id="Csenha">
+                  <label for="setor" class="setor"></label>
+                  <input type="setor" class="form-control" placeholder="Insira seu setor" id="Setor" name="setor">
                 </div>
+                <div class="botão">
                 <a class="btn btn-outline-light" href="index.html" role="button">Login</a>
-              </form>
+              <button type="submit" class="btn btn-outline-light" href="cadastro_user.html" role="button">Cadastrar</button  >
+              </div>
           </div>
           <div class="col">
             Column
