@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 16-Abr-2024 às 03:39
+-- Tempo de geração: 30-Abr-2024 às 00:55
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 8.2.0
 
@@ -37,6 +37,13 @@ CREATE TABLE `tb_cliente` (
   `nr_telefone` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
+--
+-- Extraindo dados da tabela `tb_cliente`
+--
+
+INSERT INTO `tb_cliente` (`cd_cliente`, `nm_cliente`, `nm_endereco`, `nr_endereco`, `nr_cpf`, `nr_cnpj`, `nr_telefone`) VALUES
+(1, 'Stefeson Gomes de Almeida Neto', 'vera stela', 48, '11111111111', '11111111111111', '11111111111');
+
 -- --------------------------------------------------------
 
 --
@@ -48,8 +55,7 @@ CREATE TABLE `tb_user` (
   `nm_usuario` varchar(45) NOT NULL,
   `nm_setor` varchar(45) NOT NULL,
   `login` varchar(45) NOT NULL,
-  `senha` varchar(45) NOT NULL,
-  `confirme` varchar(45) NOT NULL
+  `senha` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
@@ -57,6 +63,8 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`id_usuario`, `nm_usuario`, `nm_setor`, `login`, `senha`) VALUES
+(1, 'Stefeson', 'TI', 'stefeson@gmail.com', '1234');
+
 --
 -- Índices para tabelas despejadas
 --
@@ -81,13 +89,13 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT de tabela `tb_cliente`
 --
 ALTER TABLE `tb_cliente`
-  MODIFY `cd_cliente` int NOT NULL AUTO_INCREMENT;
+  MODIFY `cd_cliente` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_usuario` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_usuario` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
