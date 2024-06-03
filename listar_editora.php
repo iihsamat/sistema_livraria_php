@@ -16,13 +16,13 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cadastro_cliente.html">Cadastro de clientes</a>
+            <a class="nav-link" href="cadastro_cliente2.php">Cadastrar Cliente</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cadastro_editora.html">Cadastro Editora</a>
+            <a class="nav-link" href="cadastro_editora.html">Cadastrar Editora</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -24,7 +24,7 @@
             <a class="nav-link" href="cadastro_cliente.html">Cadastrar Clientes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cadastro_user.html">Cadastrar Editora</a>
+            <a class="nav-link" href="cadastro_editora.html">Cadastrar Editora</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -38,6 +38,15 @@
           </li>
         </ul>
       </div>
+    </div>
+    <div>
+      <?php
+      session_start();
+      if (isset($_SESSION['username'])) {
+        $username = $_SESSION['username'];
+        echo "Olá, $username";
+      }
+      ?>
     </div>
   </nav>
 <div class="container text-center"> 

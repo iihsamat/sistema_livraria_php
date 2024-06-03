@@ -6,7 +6,6 @@
     <title>Listar Usuarios</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/c0f408d1cc.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
   </head>
 <body2>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -21,7 +20,7 @@
             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cadastro_cliente.html">Cadastrar Clientes</a>
+            <a class="nav-link" href="cadastro_cliente2.php">Cadastrar Clientes</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="cadastro_user.html">Cadastrar Editora</a>
@@ -31,7 +30,7 @@
               Relatórios
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="lister_user.php">Lista de Usuarios</a></li>
+              <li><a class="dropdown-item" href="listar_user.php">Lista de Usuarios</a></li>
               <li><a class="dropdown-item" href="listar_cliente.php">Lista de Clientes</a></li>
               <li><a class="dropdown-item" href="listar_editora.php">Lista de Editoras</a></li>
             </ul>
@@ -63,6 +62,10 @@
       <td><?php echo $result['nm_usuario']; ?> </td>
       <td><?php echo $result['nm_setor']; ?> </td>
       <td><?php echo $result['login']; ?> </td>
+      <td>
+      <a href="edit_user.php?cod=<?php echo $result['id_usuario']; ?>"><i class="icon fa-solid fa-user-pen"></i></a> 
+      <a href="deletar_user.php?cod=<?php echo $result['id_usuario']; ?>"><i class="icon2 fa-solid fa-trash-can"></i></a> 
+      </td>
     </tr>
  
     <?php } ?>

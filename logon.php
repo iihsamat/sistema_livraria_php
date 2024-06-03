@@ -26,8 +26,11 @@ $senha_banco = $result['senha'];
 
 if ($nome == $name_banco && $senha == $senha_banco) {
 
- header('location: cadastro_cliente.html');
- }else{
+  session_start(); 
+  $_SESSION['username'] = $name_banco;
+  header('location: cadastro_cliente2.php');
+  
+  }else{
 
   echo "<script>alert('Usuário Invalido!'); history.back()</script>";
 

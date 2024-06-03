@@ -43,15 +43,3 @@ form{
     font-weight: bold;
     margin-bottom: 10px;
 }
-
-.navbar ul li a {
- filter: invert(100%);
-
-
-}
-
-.navbar {
-    background-color:  rgb(19, 19, 19);
-
-
-}
