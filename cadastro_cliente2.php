@@ -45,9 +45,12 @@
       if (isset($_SESSION['username'])) {
         $username = $_SESSION['username'];
         echo "Olá, $username";
+      } else {
+        echo "<script>alert('Usuário precisa ser logado'); history.back();</script>";
       }
       ?>
     </div>
+    <span> <a class="navbar-brand" href="sair.php"><i class="fa-solid fa-right-from-bracket"></i></a></span>
   </nav>
 <div class="container text-center"> 
   <div class="row"> 

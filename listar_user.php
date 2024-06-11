@@ -8,6 +8,14 @@
     <script src="https://kit.fontawesome.com/c0f408d1cc.js" crossorigin="anonymous"></script>
   </head>
 <body2>
+<style>
+    .icon{
+      color: black;
+    }
+    .icon2{
+      color: red;
+    }
+  </style>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><i class="fa-solid fa-book"></i></a>
@@ -38,6 +46,18 @@
         </ul>
       </div>
     </div>
+    <div>
+      <?php
+      session_start();
+      if (isset($_SESSION['username'])) {
+        $username = $_SESSION['username'];
+        echo "Olá, $username";
+      } else {
+        echo "<script>alert('Usuário precisa ser logado'); history.back();</script>";
+      }
+      ?>
+    </div>
+    <span> <a class="navbar-brand" href="sair.php"><i class="fa-solid fa-right-from-bracket"></i></a></span>
   </nav>
     <div class = "container">
         <h2>Lista de Usuários</h2>
