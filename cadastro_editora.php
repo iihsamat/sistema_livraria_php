@@ -13,7 +13,6 @@ $insert = "INSERT INTO tb_editora VALUES (NULL,'$nome_editora','$endereco_editor
  
 $query = mysqli_query($conexao, $insert);
  
-echo "Inserido com Sucesso";
- 
+echo "<script>alert('Inserido com sucesso!'); history.back()</script>";
  
 ?>

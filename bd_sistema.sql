@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 11-Jun-2024 às 00:50
+-- Tempo de geração: 25-Jun-2024 às 00:43
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 8.2.0
 
@@ -24,53 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tb_cliente`
---
-
-CREATE TABLE `tb_cliente` (
-  `cd_cliente` int NOT NULL,
-  `nm_cliente` varchar(45) NOT NULL,
-  `nm_endereco` varchar(45) NOT NULL,
-  `nr_endereco` int NOT NULL,
-  `nr_cpf` char(11) NOT NULL,
-  `nr_cnpj` char(14) NOT NULL,
-  `nr_telefone` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-
---
--- Extraindo dados da tabela `tb_cliente`
---
-
-INSERT INTO `tb_cliente` (`cd_cliente`, `nm_cliente`, `nm_endereco`, `nr_endereco`, `nr_cpf`, `nr_cnpj`, `nr_telefone`) VALUES
-(1, 'Stefeson Gomes de Almeida Neto', 'vera stela', 48, '11111111111', '11111111111111', '11111111111');
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `tb_editora`
---
-
-CREATE TABLE `tb_editora` (
-  `cd_editora` int NOT NULL,
-  `nm_editora` varchar(45) NOT NULL,
-  `nm_endereco` varchar(45) NOT NULL,
-  `nr_endereco` int NOT NULL,
-  `nm_bairro` varchar(30) NOT NULL,
-  `nr_telefone` varchar(11) NOT NULL,
-  `nm_gerente` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-
---
--- Extraindo dados da tabela `tb_editora`
---
-
-INSERT INTO `tb_editora` (`cd_editora`, `nm_editora`, `nm_endereco`, `nr_endereco`, `nm_bairro`, `nr_telefone`, `nm_gerente`) VALUES
-(1, 'nome', 'endereço', 133, 'bairro', '13333333333', 'gerente'),
-(2, 'xlx', 'Ana PIres', 175, 'MOnteiro', '11959450754', 'William');
-
--- --------------------------------------------------------
-
---
 -- Estrutura da tabela `tb_user`
 --
 
@@ -79,7 +32,7 @@ CREATE TABLE `tb_user` (
   `nm_usuario` varchar(45) NOT NULL,
   `nm_setor` varchar(45) NOT NULL,
   `login` varchar(45) NOT NULL,
-  `senha` varchar(45) NOT NULL
+  `senha` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
@@ -95,18 +48,6 @@ INSERT INTO `tb_user` (`id_usuario`, `nm_usuario`, `nm_setor`, `login`, `senha`)
 --
 
 --
--- Índices para tabela `tb_cliente`
---
-ALTER TABLE `tb_cliente`
-  ADD PRIMARY KEY (`cd_cliente`);
-
---
--- Índices para tabela `tb_editora`
---
-ALTER TABLE `tb_editora`
-  ADD PRIMARY KEY (`cd_editora`);
-
---
 -- Índices para tabela `tb_user`
 --
 ALTER TABLE `tb_user`
@@ -115,18 +56,6 @@ ALTER TABLE `tb_user`
 --
 -- AUTO_INCREMENT de tabelas despejadas
 --
-
---
--- AUTO_INCREMENT de tabela `tb_cliente`
---
-ALTER TABLE `tb_cliente`
-  MODIFY `cd_cliente` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT de tabela `tb_editora`
---
-ALTER TABLE `tb_editora`
-  MODIFY `cd_editora` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `tb_user`

@@ -11,7 +11,7 @@ $update = "UPDATE `tb_user` SET `nm_usuario` = '$nome ', `nm_setor` = '$setor', 
 ";
 $query = mysqli_query($conexao, $update);
 
-echo "Inserido com Sucesso";
+echo "<script>alert('Inserido com sucesso!'); history.back()</script>";
 
 
 ?>

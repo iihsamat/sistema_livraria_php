@@ -13,7 +13,7 @@ $insert = "INSERT INTO tb_cliente VALUES (NULL,'$nome_cliente','$endereco','$num
  
 $query = mysqli_query($conexao, $insert);
  
-echo "Inserido com Sucesso";
+echo "<script>alert('Inserido com sucesso!'); history.back()</script>";
  
  
 ?>
